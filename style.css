@@ -1,0 +1,119 @@
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--mute:#5b6478;--line:#e1e5ee;--red:#c8102e;--blue:#003893;--green:#1f7a4d;--r:14px}
+@font-face{font-family:Preeti;src:local("Preeti"),local("Preeti Normal")}
+@font-face{font-family:Kalimati;src:local("Kalimati")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Inter",system-ui,"Segoe UI",sans-serif;cursor:url(https://manishtamang.com/cursor/tab-cursor.png) 4 4,auto}
+body.ne,body.ne input,body.ne select,body.ne textarea,body.ne button{font-family:Kalimati,"Noto Sans Devanagari","Mangal",sans-serif}
+a,button,select,summary,label.file,[data-act],.seg button{cursor:url(https://manishtamang.com/cursor/tab-cursor.png) 4 4,pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,3.4rem)}h2{font-size:1.6rem}h3{font-size:1.1rem}
+.muted{color:var(--mute)}.err{color:var(--red);min-height:1.4em;margin:.2em 0}
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem clamp(1rem,4vw,2.5rem);background:rgba(246,247,251,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:8px 0 0 var(--blue)}
+.brand{padding-right:8px}
+.tools{display:flex;gap:.6rem;align-items:center}
+.seg{display:flex;border:1.5px solid var(--ink);border-radius:99px;overflow:hidden}
+.seg button{border:0;background:none;padding:.35rem .8rem;font:inherit;font-weight:600;color:var(--ink)}
+.seg button.on{background:var(--ink);color:#fff}
+button{font:inherit}
+.primary,.ghost,.danger,.ok{border-radius:99px;padding:.55rem 1.1rem;font-weight:600;border:1.5px solid var(--ink)}
+.primary{background:var(--ink);color:#fff}.primary:hover{background:var(--blue);border-color:var(--blue)}
+.ghost{background:none;color:var(--ink)}.ghost:hover{background:var(--ink);color:#fff}
+.danger{background:none;color:var(--red);border-color:var(--red)}.ok{background:none;color:var(--green);border-color:var(--green)}
+.sm{padding:.25rem .7rem;font-size:.85rem}
+.login{min-height:calc(100vh - 60px);display:grid;place-items:center;padding:1.5rem;background:radial-gradient(circle at 15% 20%,#e6ecfb 0,transparent 40%),radial-gradient(circle at 90% 80%,#fde8ec 0,transparent 40%)}
+.login-card{max-width:520px;width:100%}
+.kicker{display:inline-block;background:var(--red);color:#fff;padding:.15rem .7rem;border-radius:99px;font-weight:600;font-size:.85rem}
+form label{display:block;margin:.8rem 0;font-weight:600;font-size:.9rem}
+input,select,textarea{width:100%;margin-top:.25rem;padding:.6rem .8rem;border:1.5px solid var(--line);border-radius:10px;background:#fff;font:inherit;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--blue)}
+.hint{font-size:.85rem;color:var(--mute);margin-top:1rem;background:#fff;border:1px dashed var(--line);padding:.5rem .8rem;border-radius:10px}
+.app{display:grid;grid-template-columns:230px 1fr;min-height:calc(100vh - 60px)}
+.nav{padding:1.2rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:.3rem;position:sticky;top:60px;align-self:start}
+.nav button{text-align:left;border:0;background:none;padding:.65rem .9rem;border-radius:10px;font-weight:600;color:var(--mute)}
+.nav button:hover{background:#fff}.nav button.on{background:var(--ink);color:#fff}
+.nav .who{font-size:.85rem;color:var(--mute);margin-bottom:.8rem}
+.view{padding:clamp(1rem,3vw,2.2rem);max-width:1100px;outline:0}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}.row .grow{flex:1;min-width:180px}.row input,.row select{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem}
+.stat b{display:block;font-size:2.4rem;line-height:1}
+.person{display:flex;gap:.8rem;align-items:center;text-align:left;width:100%;border:1px solid var(--line);background:#fff;border-radius:var(--r);padding:.9rem}
+.person:hover{border-color:var(--blue);transform:rotate(-.6deg)}
+.av{width:52px;height:52px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;object-fit:cover;flex:none}
+.av.lg{width:96px;height:96px;font-size:2rem}
+.tag{display:inline-block;padding:.05rem .6rem;border-radius:99px;font-size:.8rem;font-weight:600;background:#e8eefc;color:var(--blue)}
+.tag.g{background:#e3f4ea;color:var(--green)}.tag.r{background:#fde8ec;color:var(--red)}.tag.y{background:#fff3d6;color:#8a5a00}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+th,td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid var(--line);font-size:.93rem}th{background:#eef1f8}
+.scroll{overflow-x:auto}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden;min-width:90px}.bar i{display:block;height:100%;background:var(--green)}
+.tl{border-left:3px solid var(--line);margin:1rem 0 0 .5rem;padding-left:1rem}.tl p{margin:0 0 .9rem}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(20,33,61,.5);display:grid;place-items:center;padding:1rem}.modal[hidden]{display:none}
+.sheet{background:#fff;border-radius:18px;padding:1.5rem;max-width:680px;width:100%;max-height:90vh;overflow:auto}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.sticky{position:fixed;right:24px;bottom:24px;width:210px;height:210px;z-index:40;background:url(https://manishtamang.com/svg/sticky-green.svg) center/100% 100% no-repeat;padding:42px 18px 18px;touch-action:none;user-select:none;filter:drop-shadow(0 6px 8px rgba(0,0,0,.2))}
+.sticky::before{content:"";position:absolute;left:0;right:0;top:0;height:36px;cursor:grab}
+.sticky.drag::before{cursor:grabbing}
+.sticky textarea{width:100%;height:100%;margin:0;padding:0;border:0;background:transparent;resize:none;font:600 .95rem/1.4 "Comic Sans MS","Segoe Print",cursive;color:#14331f;user-select:text}
+.sticky textarea:focus{outline:0}
+.preeti #view,.preeti #view *{font-family:Preeti,serif!important}
+@media(max-width:800px){.app{grid-template-columns:1fr}.nav{flex-direction:row;overflow-x:auto;position:static;border-right:0;border-bottom:1px solid var(--line)}.nav .who{display:none}.cols{grid-template-columns:1fr}.sticky{width:150px;height:150px;padding:34px 14px 12px}}
+@media print{.top,.nav,.sticky,.modal,.row button,.no-print{display:none!important}.app{display:block}body{background:#fff}.card,table{break-inside:avoid}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important}}
+
+
+/* Login and logout notifications */
+.auth-toast {
+  position: fixed;
+  top: 82px;
+  right: 24px;
+  z-index: 1000;
+
+  padding: 14px 22px;
+  border-radius: 12px;
+
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+.auth-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.auth-toast.success {
+  background: #198754;
+  border-left: 5px solid #0f5132;
+}
+
+.auth-toast.error {
+  background: #dc3545;
+  border-left: 5px solid #842029;
+}
+
+@media (max-width: 600px) {
+  .auth-toast {
+    left: 16px;
+    right: 16px;
+    top: 76px;
+    text-align: center;
+  }
+}

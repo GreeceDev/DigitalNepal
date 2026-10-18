@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DigitalNepal – Employee &amp; Officer Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="authToast" class="auth-toast" role="status" aria-live="polite"></div>
+<header class="top">
+  <a class="brand" href="#"><span class="dot"></span>DigitalNepal</a>
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="ne">नेपाली</button>
+    </div>
+    <button id="logout" class="ghost" hidden data-i="logout">Log out</button>
+  </div>
+</header>
+
+<main id="login" class="login">
+  <div class="login-card">
+    <p class="kicker" data-i="govnp">Government of Nepal</p>
+    <h1 data-i="heroTitle">Every officer, one trusted record.</h1>
+    <p class="muted" data-i="heroSub">Manage employees, leave, transfers and reports in one place.</p>
+    <form id="loginForm">
+      <label><span data-i="username">Username / Employee ID</span><input id="lu" required autocomplete="username"></label>
+      <label><span data-i="password">Password</span><input id="lp" type="password" required autocomplete="current-password"></label>
+      <p id="lerr" class="err" role="alert"></p>
+      <button class="primary" data-i="login">Log in</button>
+    </form>
+  </div>
+</main>
+
+<div id="app" class="app" hidden>
+  <nav id="nav" class="nav"></nav>
+  <section id="view" class="view" tabindex="-1"></section>
+</div>
+
+<div id="modal" class="modal" hidden><div class="sheet" id="sheet"></div></div>
+
+<aside id="sticky" class="sticky" aria-label="Sticky note">
+  <textarea id="stickyText" data-ph="note" placeholder="Write a note…" aria-label="Note"></textarea>
+</aside>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
